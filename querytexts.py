@@ -106,7 +106,7 @@ class Query:
 		#print(queryVec)
 		results = [[self.dotProduct(vectors[result], queryVec), result] for result in resultDocs]
 		#print(results)
-		results.sort(key=lambda x: x[1])
+		results.sort(key=lambda x: x[0])
 		#print(results)
 		results = [x[1] for x in results]
 		return results
